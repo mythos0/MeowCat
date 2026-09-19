@@ -44,7 +44,7 @@ If you make it angry, it **claws your screen** — realistic spiderweb cracks an
 
 ## 📥 Install (Windows 11)
 
-1. Download **`MeowCat-2.0.0-x64.msi`** from the [latest release](../../releases/latest).
+1. Download **`MeowCat-2.0.1-x64.msi`** from the [latest release](../../releases/latest).
 2. Double-click → installs to `Program Files\MeowCat`, creates a **desktop shortcut**, a
    Start-Menu entry, and an *Apps & Features* entry.
 3. To remove: *Settings ▸ Apps ▸ MeowCat ▸ Uninstall* (or run the MSI again to repair/upgrade).
