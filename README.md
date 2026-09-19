@@ -42,6 +42,8 @@ If you make it angry, it **claws your screen** — realistic spiderweb cracks an
 |---|---|
 | ![reminder](docs/screenshots/04_reminder.png) | ![store](docs/screenshots/05_store.png) |
 
+| ![proof](docs/screenshots/06_render_proof.png) | *All six breeds + desktop walk — v2.0.1* |
+
 ## 📥 Install (Windows 11)
 
 1. Download **`MeowCat-2.0.1-x64.msi`** from the [latest release](../../releases/latest).
