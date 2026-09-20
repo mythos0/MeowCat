@@ -1,19 +1,25 @@
 # 🐱 MeowCat
 
-<p align="center"><b>A realistic, frame-animated desktop cat for Windows 11 — free, fluent, and a little bit naughty.</b></p>
+<p align="center"><b>A procedurally animated desktop cat for Windows 11 — every frame drawn by
+code, no sprite sheets, nothing pre-rendered.</b></p>
 
-MeowCat lives *on top of everything* on your screen. It is drawn from **AI-generated
-photographic-quality frames** — every action is a hand-tuned sprite sequence (8-frame motion clips,
-4-frame idle clips) blended with **real-time cross-fade interpolation at 60 FPS**, so it moves like
-a living animal instead of a flipbook.
+MeowCat lives *on top of everything* on your screen. There is **zero image art** for the cat:
+every whisker, tail wave and ear twitch is computed in real time on a canvas at 60 FPS — so it
+can squash, stretch, flip, somersault and change breed with no animation frames to break.
 
-It strolls along your taskbar, **hops onto the title bars of your open windows and walks from
-window to window**, dances, naps, chases your cursor, plays with yarn, and when you minimize
-everything it **wanders between the folder icons on your desktop and scratches next to them**.
-If you make it angry, it **claws your screen** — realistic spiderweb cracks and gouges appear
-*above* all your windows until the cat calms down and every crack fades away.
+It strolls your taskbar, treats your **open windows as platforms** — walk near one and it
+**jumps onto the top border, strolls along it, then hops to the nearest neighbouring window**.
+Minimize everything and it roams the **full screen like an open field, wandering from random
+place to random place**. Pick the **Panda** and it waddles, somersaults, and munches a bamboo
+stalk it holds in its paws.
 
-![hero](docs/screenshots/01_hero_walk.png)
+| Live on the desktop | Premium Cat Store — 13 breeds |
+|---|---|
+| ![live](docs/screenshots/v31_live.png) | ![store](docs/screenshots/v31_store.png) |
+
+| Every action × breed × emote | Panda & bamboo |
+|---|---|
+| ![sheet](docs/screenshots/v31_sheet.png) | ![panda](docs/screenshots/v31_panda.png) |
 
 ---
 
@@ -21,54 +27,54 @@ If you make it angry, it **claws your screen** — realistic spiderweb cracks an
 
 | | |
 |---|---|
-| 🐈 **Realistic frame animation** | AI-generated photoreal kitten — 6 breeds, 60 FPS cross-faded playback, 0.5×–2× size |
-| 🚶 **Window-top strolling** | Walks near a window → auto-jumps onto its title bar → strolls along it → hops to the *nearest* neighbouring window and continues |
-| 🖥️ **Desktop explorer** | All windows minimized? The cat walks between your actual desktop folder icons (real shell positions) and scratches beside them |
-| 😠 **Angry mode** | Click the grumpy cat → claw swipes stamp **broken-glass cracks** on a topmost click-through overlay. Give it a treat and every crack fades away |
-| ⏰ **Reminders & timers** | Time, repeat (once / daily / weekly / every 30 min / hourly), custom message — and **the cat performs the movement you picked** when your reminder fires (speech bubble + tray toast + a real meow) |
-| 🛒 **Cat Store** | Breeds, party hats, top hats, bows, glasses, scarves, 5 emote packs — every card with a **live animated preview** |
-| 🪙 **Fun coins** | Your cat earns coins by living, dancing, jumping and being petted; spend them in the store |
-| 🔊 **Real cat sounds** | Three recorded meows, purr, hiss, growl, glass break + subtle footsteps, whoosh and coin foley |
-| ⚙️ **Settings** | Launch with Windows, sound & volume, cat size, reminder popups — persisted, corrupt-safe |
-| 🚫 **Always visible** | Native topmost enforcement keeps the cat above fullscreen apps and games |
+| 🎨 **Procedural 2D-canvas cat** | 6 body types, 13 breeds, radial-gradient shading, IK legs, chained pendulum tail — 100% code, 0 image frames |
+| 🐼 **13 breeds** | Grey/Orange Tabby, Siamese, Calico, Persian, Tuxedo, Bombay, Russian Blue, Ginger Kitten, Ragdoll, Bengal, Maine Coon — and a **Panda** with its own actions |
+| 🤸 **20 actions** | walk, run, sit, sleep, dance, scratch, jump, eat, stretch, groom, pounce, knead, loaf, yawn, startle + panda-only waddle, bamboo munch and somersault roll |
+| 💗 **11 emotes** | hearts, music note, question, exclaim, sweat, anger mark, laugh, star, Zzz, fish — pop in above the cat's head, context-aware |
+| 🚶 **Window-top hopping** | any window (any size) near the cat becomes a walkable platform: jump on, stroll, hop to the next window, drop back down |
+| 🌾 **Open-field roaming** | with nothing to climb, the cat wanders the whole screen to random spots like an open field |
+| ⏰ **Reminders & timers** | one-shot / daily / weekly / every-N repeats — the cat announces yours with a movement, a speech bubble and a chirp |
+| 🛒 **Cat Store** | premium dark storefront with live previews; **unlimited-coins promo — every breed unlocks free** |
+| ⚡ **Instant settings** | double-click the cat → Settings opens in milliseconds (warm window pool) |
+| 🔊 **Real sounds** | three recorded meows, purr, chirp, footsteps, scratch foley — drag & drop is quiet on purpose |
+| 🚫 **Always visible** | topmost enforcement keeps the cat above fullscreen apps and games |
+| 🧸 **About & credits** | version info and the developer's GitHub, one click away |
 
-## 📸 Screenshots
+## 🎮 Interactions
 
-| Angry mode — broken glass | Desktop stroll |
+| you do | the cat does |
 |---|---|
-| ![angry](docs/screenshots/02_angry_scratch.png) | ![desktop](docs/screenshots/03_desktop_stroll.png) |
-
-| Reminders with cat animations | Cat Store |
-|---|---|
-| ![reminder](docs/screenshots/04_reminder.png) | ![store](docs/screenshots/05_store.png) |
-
-| ![proof](docs/screenshots/06_render_proof.png) | *All six breeds + desktop walk — v2.0.1* |
+| **double-click** it | opens the Settings popup instantly |
+| single click | purrs, shows love, earns you coins |
+| drag & drop | rides your cursor; lands on the nearest window border or the ground |
+| right-click | menu: Settings · Reminders · Dance · Feed · Sleep · Quit |
+| nothing | it lives its own life: roams, naps, grooms, pounces, makes biscuits |
 
 ## 📥 Install (Windows 11)
 
-1. Download **`MeowCat-2.0.1-x64.msi`** from the [latest release](../../releases/latest).
-2. Double-click → installs to `Program Files\MeowCat`, creates a **desktop shortcut**, a
-   Start-Menu entry, and an *Apps & Features* entry.
-3. To remove: *Settings ▸ Apps ▸ MeowCat ▸ Uninstall* (or run the MSI again to repair/upgrade).
+1. Download **`MeowCat-3.1.0-portable.exe`** from the [latest release](../../releases/latest).
+2. Double-click it — no installer, no runtime, no admin rights. A tray icon appears and the
+   cat starts exploring.
+3. Quit anytime from the tray menu.
 
-> Requires the **.NET 8 Desktop Runtime (x64)** —
-> [download here](https://dotnet.microsoft.com/download/dotnet/8.0/runtime).
+> Fully self-contained (Electron 33 embedded) — nothing else to install. The process is named
+> **MeowCat** in Task Manager, not some framework name.
 
-**Meet your cat:** right-click it (or the tray icon) for the full menu — Cat Store, Reminders,
-Settings, *Make angry* (then click the cat!). Two quick clicks on the cat = a real meow. 🐾
+## ❓ FAQ
 
-## 🧩 How it works
+* **Is anything sent to the internet?** No. MeowCat has no telemetry and no network features.
+* **Does it slow my PC down?** The cat costs about as much as a browser tab — it's a single
+  small canvas being redrawn.
+* **Why is the cat sometimes on a window?** Windows' top borders are its shelves — it's a
+  feature, not a glitch. It will hop down on its own.
+* **How do I get the Panda?** Double-click the cat → Cat Store → Panda. Free during the
+  unlimited-coins promo.
 
-- **WPF topmost overlay** — the cat is a transparent window spanning your screen; transparent
-  pixels pass every click through to your apps.
-- **AI brain** — happiness / energy / boredom drive weighted autonomous actions; the platform
-  tracker knows which window top edge (or desktop icon row) the cat is standing on.
-- **Frame renderer** — 512×512 keyed frames, contact shadows that shrink mid-air, emotes,
-  accessories anchored per pose, speech bubbles.
-- **Native interop** — `EnumWindows` for jump targets, shell `SysListView32` for real desktop icon
-  positions, `SetWindowPos(HWND_TOPMOST)` re-assertion so fullscreen apps never bury the cat.
+## 👨‍💻 Developer
+
+Built by [**mythos0**](https://github.com/mythos0) — the private source repository, the public
+issue tracker and future releases all live on GitHub.
 
 ## 📄 License
 
-MIT — see [LICENSE](LICENSE). Cat artwork and sounds are generated/downloaded assets shipped with
-the app.
+MIT © 2026 mythos0 — see [LICENSE](LICENSE).
