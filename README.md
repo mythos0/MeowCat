@@ -10,10 +10,14 @@ can squash, stretch, flip, somersault and change breed with no animation frames 
 It treats your **open windows as platforms** — walk near one and it **jumps onto the top
 border, strolls along it, then hops to the nearest neighbouring window**. When a **butterfly**
 flutters by, the cat hunts it like a real cat: it notices, stalks with a butt-wiggle, creeps
-in, then **rears up onto its hind legs and strikes with its front paws** — and the butterfly
-*dodges*, jinking up and away. Miss three times and the butterfly escapes; connect once and
-you earn coins. Pick the **Panda** and it behaves like a real bear — it **waddles**, **sits up
-to hook and gnaw a bamboo stalk**, **somersaults**, and naps sprawled flat.
+in, then **rears up onto its hind legs and strikes with its front paws** — the butterfly
+hovers *above* paw reach and only dips down now and then, so every catch has to be *timed*;
+a missed swat makes it **dodge** with a sharp climb-jink while the cat drops to all fours and
+chases again. Miss three times and the butterfly escapes; connect once and you earn coins.
+And it **listens**: say **“hey cat, play music <song>”** and it opens Brave on YouTube and
+plays the first result — with pause, skip and volume commands to match. Pick the **Panda**
+and it behaves like a real bear — it **waddles**, **sits up to hook and gnaw a bamboo
+stalk**, **somersaults**, and naps sprawled flat.
 
 | Live on the desktop | Premium Cat Store |
 |---|---|
@@ -31,7 +35,9 @@ to hook and gnaw a bamboo stalk**, **somersaults**, and naps sprawled flat.
 |---|---|
 | 🎨 **Procedural 2D-canvas cat** | 8 body types, 24 breeds, radial-gradient shading, IK legs, chained pendulum tail — 100% code, 0 image frames |
 | 🐱 **24 breeds, ginger kitten default** | the **Ginger Kitten** greets new users; Tabby, Siamese, Calico, Persian, Tuxedo, Bombay, Russian Blue, Ragdoll, Bengal, Maine Coon, **Panda**, Mochi, Scottish Fold, Snow Angora, Somali, British Plush, Choco Munchkin, Sakura and the kitten litter (Cocoa, Milky, Smokey, Midnight) |
-| 🦋 **Real butterfly hunts (v3.14)** | butterflies visit every display; the cat notices, stalks, **stands up on its hind legs and swats with its front paws**; the butterfly **dodges** with a sharp climb-jink; miss 3× and it escapes, connect and earn 🪙 + a heart |
+| 🦋 **Real butterfly hunts (v3.15)** | butterflies visit every display, hovering **above paw reach** and periodically dipping into it — the cat stalks, **stands on its hind legs and swats**; a missed swat means a sharp **dodge-climb** and a fresh chase, 3 misses = the butterfly escapes, a well-timed connect earns 🪙 + a heart |
+| 🎙️ **Voice commands (v3.15)** | say **“hey cat, play music <song>”** — it finds the first YouTube result and plays it in **Brave** (or your default browser); the cat **salutes** when it hears you and echoes the command it received; also: pause · resume · stop · next song · previous song · volume up/down · mute · “stop listening” — speech recognition runs **locally on Windows**, nothing is uploaded |
+| 💃 **Choreographed dance (v3.15)** | a full four-step routine — disco point, a twirl, the side-shuffle and a paw-wave finale — instead of a plain bounce |
 | 🐈‍⬛ **Companion kitten** | a second small cat that follows the big cat, leaps up to join it on window tops, wakes when the pair separates, and play-fights |
 | 🐼 **A panda that's not a cat** | bear barrel body, heavy waddle, sits up to eat bamboo with both paws, somersaults, naps sprawled — behavior researched from real giant pandas |
 | 🚶 **Window-top hopping** | any window (any size, resizable) near the cat becomes a walkable platform: jump on, stroll, hop to the next window, drop back down |
@@ -44,7 +50,7 @@ to hook and gnaw a bamboo stalk**, **somersaults**, and naps sprawled flat.
 | 📸 **Photo mode** | Ctrl+Alt+P freezes the pose and saves a transparent PNG |
 | 🪶 **Low memory** | no GPU process, one small overlay lane, services in-host — a lean process footprint |
 | 🛡️ **Never quits on its own** | a hard quit gate blocks any non-explicit exit (window loss, crashes, signals, stray quits are reversed and journaled); a watchdog revives a hung overlay; only **you** can Quit |
-| ⌨️ **Hotkeys & privacy** | Ctrl+Alt+C summon/hide, Ctrl+Alt+P photo — all optional; no telemetry, no network |
+| ⌨️ **Hotkeys & privacy** | Ctrl+Alt+C summon/hide, Ctrl+Alt+P photo, voice commands — all optional toggles; no telemetry ever |
 
 ## 🎮 Interactions
 
@@ -54,13 +60,14 @@ to hook and gnaw a bamboo stalk**, **somersaults**, and naps sprawled flat.
 | **double-click** | the classic meow — that's it, nothing opens |
 | **drag & drop** | rides your cursor anywhere — including across monitor boundaries |
 | **right-click** | menu: Settings · Store · Reminders · Dance · Feed · Sleep · Quit |
+| **say “hey cat …”** | it **salutes**, echoes your command and obeys: play music · pause · next · volume · mute |
 | **feed it** | a fish appears — it bites, chews and swallows (the panda gets bamboo) |
 | **idle cursor nearby** | it may stalk and pounce it — the butterfly hunts are never interrupted |
 | **nothing** | it lives its own life: strolls, naps, grooms, hunts butterflies, makes biscuits |
 
 ## 📥 Install (Windows 11)
 
-1. Download **`MeowCat-3.14.0-portable.exe`** from the [latest release](../../releases/latest).
+1. Download **`MeowCat-3.15.0-portable.exe`** from the [latest release](../../releases/latest).
 2. Double-click it — no installer, no runtime, no admin rights. A tray icon appears and the
    cat starts exploring.
 3. Quit anytime from the tray menu.
@@ -70,7 +77,11 @@ to hook and gnaw a bamboo stalk**, **somersaults**, and naps sprawled flat.
 
 ## ❓ FAQ
 
-* **Is anything sent to the internet?** No. MeowCat has no telemetry and no network features.
+* **Is anything sent to the internet?** MeowCat itself has no telemetry. The one feature that
+  touches the network is the voice music command: it looks up the first YouTube result for the
+  song you asked for and opens it in your own browser. Speech recognition runs locally on Windows —
+  your microphone audio never leaves the machine. Voice commands can be switched off in
+  Settings → Hotkeys & Privacy.
 * **Does it slow my PC down?** It's a single small canvas being redrawn — no GPU process, one
   helper window, services in-host.
 * **Why is the cat sometimes on a window?** Windows' top borders are its shelves — it's a
