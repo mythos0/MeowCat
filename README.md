@@ -36,8 +36,8 @@ stalk**, **somersaults**, and naps sprawled flat.
 | 🎨 **Procedural 2D-canvas cat** | 8 body types, 24 breeds, radial-gradient shading, IK legs, chained pendulum tail — 100% code, 0 image frames |
 | 🐱 **24 breeds, ginger kitten default** | the **Ginger Kitten** greets new users; Tabby, Siamese, Calico, Persian, Tuxedo, Bombay, Russian Blue, Ragdoll, Bengal, Maine Coon, **Panda**, Mochi, Scottish Fold, Snow Angora, Somali, British Plush, Choco Munchkin, Sakura and the kitten litter (Cocoa, Milky, Smokey, Midnight) |
 | 🦋 **Real butterfly hunts (v3.15)** | butterflies visit every display, hovering **above paw reach** and periodically dipping into it — the cat stalks, **stands on its hind legs and swats**; a missed swat means a sharp **dodge-climb** and a fresh chase, 3 misses = the butterfly escapes, a well-timed connect earns 🪙 + a heart |
-| 🎙️ **Voice commands (v3.16)** | say **“hey cat, play music <song>”** — it finds the first YouTube result and plays it in **Brave** (or your default browser); the cat **salutes** when it hears you and echoes the command it received; also: pause · resume · stop · next song · previous song · volume up/down · mute · “stop listening”; v3.16 rebuilt the listening chain: a **cloud-quality recognizer with an automatic offline fallback**, so accented English and mangled wake words (“hey kat”, “hay cat”) still work — and if the microphone is blocked, Settings **tells you exactly what to fix** |
-| 💃 **Choreographed dance (v3.16)** | a six-step routine danced **on its hind legs**: step right → step left → **hands up** → **turn around** (it shows you its back!) → **shake tail** (the tail lashes overhead) → a happy squinting **finish** with a paw by the cheek and a heart |
+| 🎙️ **Voice commands (v3.17)** | say **“hey cat, play music <song>”** — it finds the first YouTube result and plays it in **Brave** (or your default browser); the cat **salutes** when it hears you and echoes the command it received; also: pause · resume · stop · next song · previous song · volume up/down · mute · “stop listening”. v3.17 rebuilt the listening chain from the ground up: **an offline Windows recognizer and the browser engine listen in parallel** — the offline engine needs **no internet and no API keys**, it shows exactly which recognizer is listening, and mangled wake words (“hey kat”, “hay cat”) still fire. If the microphone is blocked, Settings **tells you exactly what to fix** |
+| 💃 **Choreographed dance (v3.17)** | a six-step routine danced **on its hind legs**, matched step for step to the reference sheet: step right → step left → **hands up** → **turn around** (it shows you its back!) → **shake tail** (the tail lashes overhead) → a happy squinting **finish** with a paw by the cheek and a heart. v3.17 rebuilt the whole routine: **stubby short legs** on a low compact body, and the side-steps really **travel across the screen** instead of rocking in place — with zero pose snaps between steps |
 | 🐈‍⬛ **Companion kitten** | a second small cat that follows the big cat, leaps up to join it on window tops, wakes when the pair separates, and play-fights |
 | 🐼 **A panda that's not a cat** | bear barrel body, heavy waddle, sits up to eat bamboo with both paws, somersaults, naps sprawled — behavior researched from real giant pandas |
 | 🚶 **Window-top hopping** | any window (any size, resizable) near the cat becomes a walkable platform: jump on, stroll, hop to the next window, drop back down |
@@ -62,12 +62,14 @@ stalk**, **somersaults**, and naps sprawled flat.
 | **right-click** | menu: Settings · Store · Reminders · Dance · Feed · Sleep · Quit |
 | **say “hey cat …”** | it **salutes**, echoes your command and obeys: play music · pause · next · volume · mute (even “hey kat” and friends — it forgives accents) |
 | **feed it** | a fish appears — it bites, chews and swallows (the panda gets bamboo) |
-| **idle cursor nearby** | it may stalk and pounce it — the butterfly hunts are never interrupted |
 | **nothing** | it lives its own life: strolls, naps, grooms, hunts butterflies, makes biscuits |
+| **multiple meows in a row** | 🔊 v3.17: they **queue and play one after another** — never cutting each other off |
+
+> **v3.17 housekeeping** — the system-watching "Reactions" settings page is gone (the cat reacts to *you*, not your CPU); **Focus & Reminders moved onto the settings homepage**; the 🍅 pomodoro badge counts down **in real time**; a cat standing inside a drawn no-walk zone now steps out calmly instead of vibrating in place.
 
 ## 📥 Install (Windows 11)
 
-1. Download **`MeowCat-3.16.0-portable.exe`** from the [latest release](../../releases/latest).
+1. Download **`MeowCat-3.17.0-portable.exe`** from the [latest release](../../releases/latest).
 2. Double-click it — no installer, no runtime, no admin rights. A tray icon appears and the
    cat starts exploring.
 3. Quit anytime from the tray menu.
