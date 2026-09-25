@@ -61,10 +61,14 @@ And it **dances** — a six-step hind-leg routine: step right → step left → 
 > cost a background process. The Cat Store is now a **curated boutique** — three cats, hats and
 > dresses — and a cat that bumps into a wall now **stops, sniffs and turns around once** like a
 > real cat instead of flipping back and forth in place.
+>
+> **v3.18.1** replaces the v3.18.0 installer, which was uploaded corrupted and could not start
+> on some PCs ("version not compatible"). It also keeps the cat inside its roaming lane when
+> it chases your cursor or the laser dot to the very screen edge.
 
 ## 📥 Install (Windows 11)
 
-1. Download **`MeowCat-3.18.0-portable.exe`** from the [latest release](../../releases/latest).
+1. Download **`MeowCat-3.18.1-portable.exe`** from the [latest release](../../releases/latest).
 2. Double-click it — no installer, no runtime, no admin rights. A tray icon appears and the
    cat starts exploring.
 3. Quit anytime from the tray menu.
