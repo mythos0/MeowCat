@@ -36,8 +36,8 @@ stalk**, **somersaults**, and naps sprawled flat.
 | 🎨 **Procedural 2D-canvas cat** | 8 body types, 24 breeds, radial-gradient shading, IK legs, chained pendulum tail — 100% code, 0 image frames |
 | 🐱 **24 breeds, ginger kitten default** | the **Ginger Kitten** greets new users; Tabby, Siamese, Calico, Persian, Tuxedo, Bombay, Russian Blue, Ragdoll, Bengal, Maine Coon, **Panda**, Mochi, Scottish Fold, Snow Angora, Somali, British Plush, Choco Munchkin, Sakura and the kitten litter (Cocoa, Milky, Smokey, Midnight) |
 | 🦋 **Real butterfly hunts (v3.15)** | butterflies visit every display, hovering **above paw reach** and periodically dipping into it — the cat stalks, **stands on its hind legs and swats**; a missed swat means a sharp **dodge-climb** and a fresh chase, 3 misses = the butterfly escapes, a well-timed connect earns 🪙 + a heart |
-| 🎙️ **Voice commands (v3.15)** | say **“hey cat, play music <song>”** — it finds the first YouTube result and plays it in **Brave** (or your default browser); the cat **salutes** when it hears you and echoes the command it received; also: pause · resume · stop · next song · previous song · volume up/down · mute · “stop listening” — speech recognition runs **locally on Windows**, nothing is uploaded |
-| 💃 **Choreographed dance (v3.15)** | a full four-step routine — disco point, a twirl, the side-shuffle and a paw-wave finale — instead of a plain bounce |
+| 🎙️ **Voice commands (v3.16)** | say **“hey cat, play music <song>”** — it finds the first YouTube result and plays it in **Brave** (or your default browser); the cat **salutes** when it hears you and echoes the command it received; also: pause · resume · stop · next song · previous song · volume up/down · mute · “stop listening”; v3.16 rebuilt the listening chain: a **cloud-quality recognizer with an automatic offline fallback**, so accented English and mangled wake words (“hey kat”, “hay cat”) still work — and if the microphone is blocked, Settings **tells you exactly what to fix** |
+| 💃 **Choreographed dance (v3.16)** | a six-step routine danced **on its hind legs**: step right → step left → **hands up** → **turn around** (it shows you its back!) → **shake tail** (the tail lashes overhead) → a happy squinting **finish** with a paw by the cheek and a heart |
 | 🐈‍⬛ **Companion kitten** | a second small cat that follows the big cat, leaps up to join it on window tops, wakes when the pair separates, and play-fights |
 | 🐼 **A panda that's not a cat** | bear barrel body, heavy waddle, sits up to eat bamboo with both paws, somersaults, naps sprawled — behavior researched from real giant pandas |
 | 🚶 **Window-top hopping** | any window (any size, resizable) near the cat becomes a walkable platform: jump on, stroll, hop to the next window, drop back down |
@@ -57,17 +57,17 @@ stalk**, **somersaults**, and naps sprawled flat.
 | you do | the cat does |
 |---|---|
 | **single click** | a natural single meow |
-| **double-click** | the classic meow — that's it, nothing opens |
+| **double-click** | the classic meow — that's it, nothing opens (while music is actually playing the meow politely holds its tongue and mouths a silent ♪ instead) |
 | **drag & drop** | rides your cursor anywhere — including across monitor boundaries |
 | **right-click** | menu: Settings · Store · Reminders · Dance · Feed · Sleep · Quit |
-| **say “hey cat …”** | it **salutes**, echoes your command and obeys: play music · pause · next · volume · mute |
+| **say “hey cat …”** | it **salutes**, echoes your command and obeys: play music · pause · next · volume · mute (even “hey kat” and friends — it forgives accents) |
 | **feed it** | a fish appears — it bites, chews and swallows (the panda gets bamboo) |
 | **idle cursor nearby** | it may stalk and pounce it — the butterfly hunts are never interrupted |
 | **nothing** | it lives its own life: strolls, naps, grooms, hunts butterflies, makes biscuits |
 
 ## 📥 Install (Windows 11)
 
-1. Download **`MeowCat-3.15.0-portable.exe`** from the [latest release](../../releases/latest).
+1. Download **`MeowCat-3.16.0-portable.exe`** from the [latest release](../../releases/latest).
 2. Double-click it — no installer, no runtime, no admin rights. A tray icon appears and the
    cat starts exploring.
 3. Quit anytime from the tray menu.
@@ -77,11 +77,12 @@ stalk**, **somersaults**, and naps sprawled flat.
 
 ## ❓ FAQ
 
-* **Is anything sent to the internet?** MeowCat itself has no telemetry. The one feature that
-  touches the network is the voice music command: it looks up the first YouTube result for the
-  song you asked for and opens it in your own browser. Speech recognition runs locally on Windows —
-  your microphone audio never leaves the machine. Voice commands can be switched off in
-  Settings → Hotkeys & Privacy.
+* **Is anything sent to the internet?** MeowCat itself has no telemetry. The features that touch
+  the network are the voice music command (it looks up the first YouTube result for the song you
+  asked for and opens it in your own browser) and voice recognition itself: commands are understood
+  through Chromium's speech recognizer when you are online, with the Windows offline engine as an
+  automatic fallback. Only recognized command phrases are processed — nothing is recorded or stored
+  by the cat, and voice commands can be switched off entirely in Settings → Hotkeys & Privacy.
 * **Does it slow my PC down?** It's a single small canvas being redrawn — no GPU process, one
   helper window, services in-host.
 * **Why is the cat sometimes on a window?** Windows' top borders are its shelves — it's a
