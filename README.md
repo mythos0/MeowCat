@@ -28,7 +28,7 @@ And it **dances** — a six-step hind-leg routine: step right → step left → 
 | | |
 |---|---|
 | 🎨 **Procedural 2D-canvas cat** | radial-gradient shading, IK legs, chained pendulum tail — 100% code, 0 image frames |
-| 🐱 **Three cats, chosen by you** | **Ginger Cat** (the default — the big-headed, short-legged kitten everyone knows), **Grey Tabby**, and the blue-grey plush **Smokey Kitten** to unlock — plus **14 hats** (top hat, crown, bow, pumpkin, santa, flower, shades, witch, party, chef, cowboy, beanie, halo, devil horns) and **10 costumes** (red hearts, blue stripes, pink polka-dots, midnight stars, sakura blossoms, sunshine, rainbow, strawberry, lightning-bolt hero suit, pirate stripes) from the Cat Store, drawn on the cat in real time |
+| 🐱 **Three cats, chosen by you** | **Ginger Cat** (the default — the big-headed, short-legged kitten everyone knows), **Grey Tabby**, and the blue-grey plush **Smokey Kitten** to unlock — plus **14 hats** (top hat, crown, bow, pumpkin, santa, flower, shades, witch, party, chef, cowboy, beanie, halo, devil horns) from the Cat Store, drawn on the cat in real time |
 | 🦋 **Real butterfly hunts** | butterflies visit every display, hovering **above paw reach** and periodically dipping into it — the cat stalks, **stands on its hind legs and swats**; a missed swat means a sharp **dodge-climb** and a fresh chase, 3 misses = the butterfly escapes, a well-timed connect earns 🪙 + a heart |
 | 💃 **Choreographed dance** | a six-step routine danced **on its hind legs**, with **stubby short legs** on a low compact body; the side-steps really **travel across the screen**, the raised paws are the cat's actual front paws (exactly four limbs at all times), and there are zero pose snaps between steps |
 | 🐈‍⬛ **Companion kitten** | a second small cat that follows the big cat, leaps up to join it on window tops, wakes when the pair separates, and play-fights |
@@ -75,6 +75,14 @@ And it **dances** — a six-step hind-leg routine: step right → step left → 
 > halo, horns) and **6 new costumes** (sakura, sunshine, rainbow, strawberry, hero suit,
 > pirate) — every one of them rendered, mirrored and pixel-diffed across all three cats
 > before shipping.
+>
+> **v3.20 — the Cat Store closes cleanly now.** A major bug could take the whole cat down
+> when you closed the Cat Store window; the close path is rebuilt so closing the store only
+> ever closes the store, and three independent safety nets (a visibility fallback, a 2-second
+> cat watchdog and an all-windows-lost resurrection) make sure the cat **always** comes back.
+> At the same time the wardrobe is **hats-only**: all dresses/costumes were removed at your
+> request — every one of the 14 hats is still there, still rendered and pixel-verified on all
+> three cats.
 
 ## 📥 Install (Windows 11)
 
