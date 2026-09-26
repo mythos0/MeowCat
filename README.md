@@ -28,7 +28,7 @@ And it **dances** — a six-step hind-leg routine: step right → step left → 
 | | |
 |---|---|
 | 🎨 **Procedural 2D-canvas cat** | radial-gradient shading, IK legs, chained pendulum tail — 100% code, 0 image frames |
-| 🐱 **Three cats, chosen by you** | **Grey Tabby** (the default), **Ginger Cat**, and the blue-grey plush **Smokey Kitten** to unlock — plus **7 hats** (top hat, crown, bow, pumpkin, santa, flower, shades) and **4 dresses** (red hearts, blue stripes, pink polka-dots, midnight stars) from the Cat Store, drawn on the cat in real time |
+| 🐱 **Three cats, chosen by you** | **Ginger Cat** (the default — the big-headed, short-legged kitten everyone knows), **Grey Tabby**, and the blue-grey plush **Smokey Kitten** to unlock — plus **14 hats** (top hat, crown, bow, pumpkin, santa, flower, shades, witch, party, chef, cowboy, beanie, halo, devil horns) and **10 costumes** (red hearts, blue stripes, pink polka-dots, midnight stars, sakura blossoms, sunshine, rainbow, strawberry, lightning-bolt hero suit, pirate stripes) from the Cat Store, drawn on the cat in real time |
 | 🦋 **Real butterfly hunts** | butterflies visit every display, hovering **above paw reach** and periodically dipping into it — the cat stalks, **stands on its hind legs and swats**; a missed swat means a sharp **dodge-climb** and a fresh chase, 3 misses = the butterfly escapes, a well-timed connect earns 🪙 + a heart |
 | 💃 **Choreographed dance** | a six-step routine danced **on its hind legs**, with **stubby short legs** on a low compact body; the side-steps really **travel across the screen**, the raised paws are the cat's actual front paws (exactly four limbs at all times), and there are zero pose snaps between steps |
 | 🐈‍⬛ **Companion kitten** | a second small cat that follows the big cat, leaps up to join it on window tops, wakes when the pair separates, and play-fights |
@@ -65,10 +65,20 @@ And it **dances** — a six-step hind-leg routine: step right → step left → 
 > **v3.18.1** replaces the v3.18.0 installer, which was uploaded corrupted and could not start
 > on some PCs ("version not compatible"). It also keeps the cat inside its roaming lane when
 > it chases your cursor or the laser dot to the very screen edge.
+>
+> **v3.19 — the real ginger cat is home.** v3.18 accidentally swapped the beloved default
+> ginger kitten for a different-looking cat wearing the same name. The **real Ginger Cat** —
+> the big-headed, short-legged, big-eyed kitten that has been the default since the early
+> releases — is back, byte-for-byte, and is the **default cat again**. If your save file was
+> switched to the grey tabby by v3.18, the ginger cat **walks home automatically** on first
+> launch. The wardrobe also doubled: **7 new hats** (witch, party, chef, cowboy, beanie,
+> halo, horns) and **6 new costumes** (sakura, sunshine, rainbow, strawberry, hero suit,
+> pirate) — every one of them rendered, mirrored and pixel-diffed across all three cats
+> before shipping.
 
 ## 📥 Install (Windows 11)
 
-1. Download **`MeowCat-3.18.1-portable.exe`** from the [latest release](../../releases/latest).
+1. Download **`MeowCat-3.19.0-portable.exe`** from the [latest release](../../releases/latest).
 2. Double-click it — no installer, no runtime, no admin rights. A tray icon appears and the
    cat starts exploring.
 3. Quit anytime from the tray menu.
@@ -85,7 +95,8 @@ And it **dances** — a six-step hind-leg routine: step right → step left → 
   immediately.
 * **Where did the other cats go?** v3.18 curates the store: Grey Tabby, Ginger Cat and Smokey
   Kitten — with hats and dresses to collect. (Old save files with removed cats roll onto the
-  default cat automatically.)
+  default cat automatically — and since v3.19 the default cat is the **real Ginger Cat**
+  again; a save that v3.18 parked on the grey tabby walks back home on first launch.)
 * **Why is the cat sometimes on a window?** Windows' top borders are its shelves — it's a
   feature, not a glitch. It will hop down on its own.
 * **Why didn't my zone-selection show on the other monitor?** Move the mouse there — the
