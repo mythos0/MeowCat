@@ -95,9 +95,20 @@ And it **dances** — a six-step hind-leg routine: step right → step left → 
 > drawn coats — puffer, parka, santa coat, knit sweater, powder suit, cardigan — fitted to
 > every body type, stackable with every hat, all pixel-verified across the three cats.
 
+>
+> **v3.22 — natural legs.** If your cat's upper legs looked too **long** while dancing or
+> walking — that bug is fixed at the root. The leg bones were shorter than the standing
+> height, so moving poses silently stretched them (walking drew legs 1.5× their real
+> length, the dance "hands up" move 2.8×). Legs are now sized honestly to the body, a
+> drawn paw can never exceed the leg's reach (it **bends at the joint** like a real
+> cat's instead), and the dance's raised paws sit bent at the cheeks — a proper begging
+> pose — instead of straight stilts past the ears. Every movement — walk, run, gallop,
+> jump, the six-step dance and all 26 actions — was re-rendered frame by frame and
+> eyeballed on all three cats.
+
 ## 📥 Install (Windows 11)
 
-1. Download **`MeowCat-3.21.0-portable.exe`** from the [latest release](../../releases/latest).
+1. Download **`MeowCat-3.22.0-portable.exe`** from the [latest release](../../releases/latest).
 2. Double-click it — no installer, no runtime, no admin rights. A tray icon appears and the
    cat starts exploring.
 3. Quit anytime from the tray menu.
