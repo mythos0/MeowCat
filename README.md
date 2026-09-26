@@ -28,7 +28,7 @@ And it **dances** — a six-step hind-leg routine: step right → step left → 
 | | |
 |---|---|
 | 🎨 **Procedural 2D-canvas cat** | radial-gradient shading, IK legs, chained pendulum tail — 100% code, 0 image frames |
-| 🐱 **Three cats, chosen by you** | **Ginger Cat** (the default — the big-headed, short-legged kitten everyone knows), **Grey Tabby**, and the blue-grey plush **Smokey Kitten** to unlock — plus **14 hats** (top hat, crown, bow, pumpkin, santa, flower, shades, witch, party, chef, cowboy, beanie, halo, devil horns) from the Cat Store, drawn on the cat in real time |
+| 🐱 **Three cats, chosen by you** | **Ginger Cat** (the default — the big-headed, short-legged kitten everyone knows), **Grey Tabby**, and the blue-grey plush **Smokey Kitten** to unlock — plus **14 hats** (top hat, crown, bow, pumpkin, santa, flower, shades, witch, party, chef, cowboy, beanie, halo, devil horns) and **6 winter jackets** (puffer, parka, santa coat, knit sweater, powder suit, cardigan) from the Cat Store — every one drawn on the cat in real time, and hats stack with jackets |
 | 🦋 **Real butterfly hunts** | butterflies visit every display, hovering **above paw reach** and periodically dipping into it — the cat stalks, **stands on its hind legs and swats**; a missed swat means a sharp **dodge-climb** and a fresh chase, 3 misses = the butterfly escapes, a well-timed connect earns 🪙 + a heart |
 | 💃 **Choreographed dance** | a six-step routine danced **on its hind legs**, with **stubby short legs** on a low compact body; the side-steps really **travel across the screen**, the raised paws are the cat's actual front paws (exactly four limbs at all times), and there are zero pose snaps between steps |
 | 🐈‍⬛ **Companion kitten** | a second small cat that follows the big cat, leaps up to join it on window tops, wakes when the pair separates, and play-fights |
@@ -40,8 +40,8 @@ And it **dances** — a six-step hind-leg routine: step right → step left → 
 | ⏰ **Reminders & Pomodoro** | one-shot / daily / weekly / every-N repeats with bubble + chime; focus/break timer with a celebration dance — both live on the settings homepage |
 | 🏆 **Achievements & affection** | pet to build affection, unlock perks (sparkle landings, greeting bows) and achievements |
 | 📸 **Photo mode** | Ctrl+Alt+P freezes the pose and saves a transparent PNG |
-| 🪶 **Truly low memory** | no GPU process, one small overlay lane, services in-host, **one renderer at rest** — v3.18 cut the voice feature set and the warm-window pool, so closing Settings immediately frees its process |
-| 🛡️ **Never quits on its own** | a hard quit gate blocks any non-explicit exit (window loss, crashes, signals, stray quits are reversed and journaled); a watchdog revives a hung overlay; only **you** can Quit |
+| 🪶 **Truly low memory** | one small overlay lane, services in-host, **one renderer at rest** — closing Settings immediately frees its process; 6 processes total, ~46MB main |
+| 🛡️ **Never quits on its own** | a hard quit gate blocks any non-explicit exit (window loss, crashes, signals, stray quits are reversed and journaled); the cat window is unclosable from every side path and a watchdog re-creates and re-shows it; only **you** can Quit |
 | ⌨️ **Hotkeys & privacy** | Ctrl+Alt+C summon/hide, Ctrl+Alt+P photo — all optional toggles; no telemetry ever |
 
 ## 🎮 Interactions
@@ -82,11 +82,22 @@ And it **dances** — a six-step hind-leg routine: step right → step left → 
 > cat watchdog and an all-windows-lost resurrection) make sure the cat **always** comes back.
 > At the same time the wardrobe is **hats-only**: all dresses/costumes were removed at your
 > request — every one of the 14 hats is still there, still rendered and pixel-verified on all
-> three cats.
+> three cats.>
+>
+> **v3.21 — the unkillable cat + winter jackets are back.** The Cat Store close bug that
+> survived v3.20 is now fixed **at the root**: the one crash class that could still kill the
+> whole app instantly (a compositor crash running *inside* the main process) is gone — GPU
+> work runs in its own crash-isolated process again — the cat window itself is now
+> **unclosable** from every side path, a 2-second watchdog re-creates *and re-shows* the cat
+> no matter what, and a renderer-level close bypass discovered and sealed during development
+> (a `window.close()` that destroyed the window without any close event firing) is denied and
+> journaled. And at your request, **winter jackets return to the Cat Store**: six procedurally
+> drawn coats — puffer, parka, santa coat, knit sweater, powder suit, cardigan — fitted to
+> every body type, stackable with every hat, all pixel-verified across the three cats.
 
 ## 📥 Install (Windows 11)
 
-1. Download **`MeowCat-3.19.0-portable.exe`** from the [latest release](../../releases/latest).
+1. Download **`MeowCat-3.21.0-portable.exe`** from the [latest release](../../releases/latest).
 2. Double-click it — no installer, no runtime, no admin rights. A tray icon appears and the
    cat starts exploring.
 3. Quit anytime from the tray menu.
@@ -98,11 +109,10 @@ And it **dances** — a six-step hind-leg routine: step right → step left → 
 
 * **Is anything sent to the internet?** No. MeowCat has no telemetry and no network features at
   all — everything runs locally on your machine.
-* **Does it slow my PC down?** It's a single small canvas being redrawn — no GPU process, and
-  since v3.18 exactly one renderer at rest; closing the Settings window frees its process
-  immediately.
+* **Does it slow my PC down?** It's a single small canvas being redrawn — exactly one renderer at rest and a small
+  crash-isolated GPU helper; closing the Settings window frees its process immediately.
 * **Where did the other cats go?** v3.18 curates the store: Grey Tabby, Ginger Cat and Smokey
-  Kitten — with hats and dresses to collect. (Old save files with removed cats roll onto the
+  Kitten — with 14 hats and 6 winter jackets to collect. (Old save files with removed cats roll onto the
   default cat automatically — and since v3.19 the default cat is the **real Ginger Cat**
   again; a save that v3.18 parked on the grey tabby walks back home on first launch.)
 * **Why is the cat sometimes on a window?** Windows' top borders are its shelves — it's a
