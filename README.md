@@ -41,7 +41,7 @@ And it **dances** — a six-step hind-leg routine: step right → step left → 
 | 🏆 **Achievements & affection** | pet to build affection, unlock perks (sparkle landings, greeting bows) and achievements |
 | 📸 **Photo mode** | Ctrl+Alt+P freezes the pose and saves a transparent PNG |
 | 🪶 **Truly low memory** | one small overlay lane, services in-host, **one renderer at rest** — closing Settings immediately frees its process; 6 processes total, ~46MB main |
-| 🛡️ **Never quits on its own** | a hard quit gate blocks any non-explicit exit (window loss, crashes, signals, stray quits are reversed and journaled); the cat window is unclosable from every side path and a watchdog re-creates and re-shows it; only **you** can Quit |
+| 🛡️ **Never quits on its own** | a hard quit gate blocks any non-explicit exit (window loss, crashes, signals, stray quits are reversed and journaled); closing the cat only **parks it in the tray** (with a "still here" balloon) and a watchdog re-creates and re-shows it no matter what; only **you** can Quit |
 | ⌨️ **Hotkeys & privacy** | Ctrl+Alt+C summon/hide, Ctrl+Alt+P photo — all optional toggles; no telemetry ever |
 
 ## 🎮 Interactions
@@ -106,9 +106,18 @@ And it **dances** — a six-step hind-leg routine: step right → step left → 
 > jump, the six-step dance and all 26 actions — was re-rendered frame by frame and
 > eyeballed on all three cats.
 
+
+> **v3.23 — closing the window parks the cat in the tray.** The fix for "closing the window
+> quits the cat": a close gesture on the cat itself (Alt+F4, an OS window close, anything) now
+> **parks the cat in the system tray** — the window hides, the app keeps running, and a one-time
+> balloon tells you *"MeowCat is still here — click the tray icon (or press Ctrl+Alt+C) to bring
+> it back."* Left-clicking the tray icon wakes the cat instantly, relaunching the exe does too,
+> and the tray menu keeps its Show/Hide switch. Only the explicit **Quit** (tray or context menu)
+> ever stops the cat.
+
 ## 📥 Install (Windows 11)
 
-1. Download **`MeowCat-3.22.0-portable.exe`** from the [latest release](../../releases/latest).
+1. Download **`MeowCat-3.23.0-portable.exe`** from the [latest release](../../releases/latest).
 2. Double-click it — no installer, no runtime, no admin rights. A tray icon appears and the
    cat starts exploring.
 3. Quit anytime from the tray menu.
@@ -141,3 +150,4 @@ issue tracker and future releases all live on GitHub.
 ## 📄 License
 
 MIT © 2026 mythos0 — see [LICENSE](LICENSE).
+
