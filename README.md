@@ -115,9 +115,16 @@ And it **dances** — a six-step hind-leg routine: step right → step left → 
 > and the tray menu keeps its Show/Hide switch. Only the explicit **Quit** (tray or context menu)
 > ever stops the cat.
 
+> **v3.24 — auto hide & show.** A new toggle on the **Cat Store homepage**: the cat naps in the
+> tray for a set time (**10 minutes by default**, adjustable 1–720) and pops back on its own for
+> a **10-second cameo** — a natural meow, its six-step dance, then the classic double-click meow
+> — then naps again until you turn it off (which brings the cat back instantly). A live status
+> line shows what the cat is up to, the tray tooltip reads "napping in the tray" while parked,
+> and every voice respects your sound toggles.
+
 ## 📥 Install (Windows 11)
 
-1. Download **`MeowCat-3.23.0-portable.exe`** from the [latest release](../../releases/latest).
+1. Download **`MeowCat-3.24.0-portable.exe`** from the [latest release](../../releases/latest).
 2. Double-click it — no installer, no runtime, no admin rights. A tray icon appears and the
    cat starts exploring.
 3. Quit anytime from the tray menu.
