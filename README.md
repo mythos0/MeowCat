@@ -117,14 +117,27 @@ And it **dances** — a six-step hind-leg routine: step right → step left → 
 
 > **v3.24 — auto hide & show.** A new toggle on the **Cat Store homepage**: the cat naps in the
 > tray for a set time (**10 minutes by default**, adjustable 1–720) and pops back on its own for
-> a **10-second cameo** — a natural meow, its six-step dance, then the classic double-click meow
+> a **10-second cameo** (visibly — every wake is verified on screen) — a natural meow, its six-step dance, then the classic double-click meow
 > — then naps again until you turn it off (which brings the cat back instantly). A live status
 > line shows what the cat is up to, the tray tooltip reads "napping in the tray" while parked,
 > and every voice respects your sound toggles.
 
+> **v3.25 — cameos you can actually SEE + realistic cat bodies.** Two fixes in one release.
+> **(1)** The auto-hide cameo could play its meows **without the cat ever appearing** — a Windows
+> transparent-window quirk: after a long nap the re-shown window is "visible" to the OS while the
+> compositor never presents its frames (sound needs no compositing; the canvas does). Now every
+> wake **force-presents the surface** (window-style re-application, z-order, compositor invalidate,
+> the classic 1px DWM nudge), the renderer **proves the wake with real pixels**, and a verification
+> ladder escalates (harder kick → live probe → page reload, cameo replayed) if it ever isn't. A
+> starvation fallback keeps the cat on screen even on a wedged page, and the Cat Store status line
+> (broken since v3.24) actually renders now. **(2)** Every cat body was **remade from real feline
+> anatomy data** — domestic cats are ~2× longer than tall, the body spans 2.5–3 head-lengths, and
+> kittens have oversized heads with short chunky legs. Legs are 15–18% shorter, torsos longer and
+> lower-slung, heads bigger and seated closer, limbs fur-thick — no more stilts.
+
 ## 📥 Install (Windows 11)
 
-1. Download **`MeowCat-3.24.0-portable.exe`** from the [latest release](../../releases/latest).
+1. Download **`MeowCat-3.25.0-portable.exe`** from the [latest release](../../releases/latest).
 2. Double-click it — no installer, no runtime, no admin rights. A tray icon appears and the
    cat starts exploring.
 3. Quit anytime from the tray menu.
