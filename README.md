@@ -28,7 +28,7 @@ And it **dances** — a six-step hind-leg routine: step right → step left → 
 | | |
 |---|---|
 | 🎨 **Procedural 2D-canvas cat** | radial-gradient shading, IK legs, chained pendulum tail — 100% code, 0 image frames |
-| 🐱 **Three cats, chosen by you** | **Ginger Cat** (the default — the big-headed, short-legged kitten everyone knows), **Grey Tabby**, and the blue-grey plush **Smokey Kitten** to unlock — plus **14 hats** (top hat, crown, bow, pumpkin, santa, flower, shades, witch, party, chef, cowboy, beanie, halo, devil horns) and **6 winter jackets** (puffer, parka, santa coat, knit sweater, powder suit, cardigan) from the Cat Store — every one drawn on the cat in real time, and hats stack with jackets |
+| 🐱🐉 **Three cats + a dragon, chosen by you** | **Ginger Cat** (the default — the big-headed, short-legged kitten everyone knows), **Grey Tabby**, and the blue-grey plush **Smokey Kitten** to unlock — plus the **Baby Dragon**, the store's first non-cat animal, and **14 hats** (top hat, crown, bow, pumpkin, santa, flower, shades, witch, party, chef, cowboy, beanie, halo, devil horns) and **6 winter jackets** (puffer, parka, santa coat, knit sweater, powder suit, cardigan) from the Cat Store — every one drawn on the cat in real time, and hats stack with jackets |
 | 🦋 **Real butterfly hunts** | butterflies visit every display, hovering **above paw reach** and periodically dipping into it — the cat stalks, **stands on its hind legs and swats**; a missed swat means a sharp **dodge-climb** and a fresh chase, 3 misses = the butterfly escapes, a well-timed connect earns 🪙 + a heart |
 | 💃 **Choreographed dance** | a six-step routine danced **on its hind legs**, with **stubby short legs** on a low compact body; the side-steps really **travel across the screen**, the raised paws are the cat's actual front paws (exactly four limbs at all times), and there are zero pose snaps between steps |
 | 🐈‍⬛ **Companion kitten** | a second small cat that follows the big cat, leaps up to join it on window tops, wakes when the pair separates, and play-fights |
@@ -51,7 +51,7 @@ And it **dances** — a six-step hind-leg routine: step right → step left → 
 | **single click** | a natural single meow |
 | **double-click** | the classic meow — that's it, nothing opens (while music is actually playing the meow politely holds its tongue and mouths a silent ♪ instead) |
 | **drag & drop** | rides your cursor anywhere — including across monitor boundaries |
-| **right-click** | menu: Settings · Store · Reminders · Dance · Feed · Sleep · Quit |
+| **right-click** | menu: Settings · Store · Reminders · Dance · Feed · Sleep · **Breathe Fire** (when the dragon is equipped) · Quit |
 | **feed it** | a fish appears — it bites, chews and swallows |
 | **nothing** | it lives its own life: strolls, naps, grooms, hunts butterflies, makes biscuits |
 | **multiple meows in a row** | they **queue and play one after another** — never cutting each other off |
@@ -135,9 +135,22 @@ And it **dances** — a six-step hind-leg routine: step right → step left → 
 > kittens have oversized heads with short chunky legs. Legs are 15–18% shorter, torsos longer and
 > lower-slung, heads bigger and seated closer, limbs fur-thick — no more stilts.
 
+> **v3.26 — THE BABY DRAGON HAS LANDED. 🔥** The Cat Store's first non-cat animal: a **chibi
+> baby dragon** designed from a hand-drawn reference sheet — sky-blue body, cream belly plates,
+> mint bat wings, cream horns and back spikes, big warm brown eyes. Like every animal here it is
+> drawn **entirely by math** — no sprites: the wings fan real finger bones under a scalloped
+> membrane (they bounce with the trot, beat hard enough that a **jump is actual flight**, and
+> fold flat for naps), the spine spikes are sampled off the torso curve, and the legs follow the
+> same honest-skeleton rules as the cats. And it has its species signature: **FIRE THROWING, in
+> red AND blue** — a 3.2-second performance (rears back, inhales with a swelling chest, spreads
+> its wings, then breathes a flickering flame stream with a hot core, licks and rising embers,
+> each color with its own synthesized roar). Command it from the tray menu, the right-click menu
+> or the store's new fire buttons whenever the dragon is equipped — and sometimes it breathes
+> fire all on its own.
+
 ## 📥 Install (Windows 11)
 
-1. Download **`MeowCat-3.25.0-portable.exe`** from the [latest release](../../releases/latest).
+1. Download **`MeowCat-3.26.0-portable.exe`** from the [latest release](../../releases/latest).
 2. Double-click it — no installer, no runtime, no admin rights. A tray icon appears and the
    cat starts exploring.
 3. Quit anytime from the tray menu.
@@ -152,7 +165,8 @@ And it **dances** — a six-step hind-leg routine: step right → step left → 
 * **Does it slow my PC down?** It's a single small canvas being redrawn — exactly one renderer at rest and a small
   crash-isolated GPU helper; closing the Settings window frees its process immediately.
 * **Where did the other cats go?** v3.18 curates the store: Grey Tabby, Ginger Cat and Smokey
-  Kitten — with 14 hats and 6 winter jackets to collect. (Old save files with removed cats roll onto the
+  Kitten — with 14 hats and 6 winter jackets to collect. Since v3.26 there's also the
+  **Baby Dragon** (300 coins) — the first non-cat animal, and it breathes fire. (Old save files with removed cats roll onto the
   default cat automatically — and since v3.19 the default cat is the **real Ginger Cat**
   again; a save that v3.18 parked on the grey tabby walks back home on first launch.)
 * **Why is the cat sometimes on a window?** Windows' top borders are its shelves — it's a
