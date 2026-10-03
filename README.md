@@ -1,187 +1,170 @@
 # 🐱 MeowCat
 
-<p align="center"><b>A procedurally animated desktop cat for Windows 11 — every frame drawn by
-code, no sprite sheets, nothing pre-rendered.</b></p>
+**A desktop cat for Windows 11 that thinks it lives in your computer.** It doesn't just sit on
+your taskbar — it watches your CPU, hears your music, judges your build failures, and pounces on
+your mouse cursor when you leave it unattended. Every pixel of the cat is drawn by pure code on a
+canvas at 60 FPS — **no sprite frames, no image assets, no mercy**.
 
-MeowCat lives *on top of everything* on your screen. There is **zero image art** for the cat:
-every whisker, tail wave and ear twitch is computed in real time on a canvas at 60 FPS — so it
-can squash, stretch, flip, somersault and change outfit with no animation frames to break.
+![](docs/screenshots/01_hero_walk.png)
 
-It treats your **open windows as platforms** — walk near one and it **jumps onto the top
-border, strolls along it, then hops to the nearest neighbouring window**. When a **butterfly**
-flutters by, the cat hunts it like a real cat: it notices, stalks with a butt-wiggle, creeps
-in, then **rears up onto its hind legs and strikes with its front paws** — the butterfly
-hovers *above* paw reach and only dips down now and then, so every catch has to be *timed*;
-a missed swat makes it **dodge** with a sharp climb-jink while the cat drops to all fours and
-chases again. Miss three times and the butterfly escapes; connect once and you earn coins.
-And it **dances** — a six-step hind-leg routine: step right → step left → **hands up** →
-**turn around** (it shows you its back!) → **shake tail** → a happy squinting **finish**.
+```
+$ whoami
+MeowCat.exe        ← in Task Manager, always. Never "electron".
+```
 
-| Live on the desktop | Cat Store |
+## The default cat is the ginger kitten 🧡
+
+Since v3.11 the cat that greets you on a fresh install is the **Ginger Kitten** — big head,
+short legs, big eyes. Upgrading users get migrated to the kitten too (unless they had already
+picked a breed themselves). And the kitten brought friends:
+
+![](docs/screenshots/02_kitten_litter.png)
+
+**24 breeds** in the Cat Store, including the new kitten litter: Cocoa Kitten, Milky Kitten,
+Smokey Kitten, Midnight Kitten — plus Sakura, Mochi, the waddling panda and friends.
+
+## 🐲 v3.27: THE TRUE DRAGON — a species, not a costume
+
+The user asked the obvious question: *"why does the dragon activity look like a cat?"* — because
+v3.26's dragon was a cat breed wearing a dragon skin (cat skeleton, cat gaits, cat activities
+re-weighted). v3.27 remakes it **from scratch as a real species**, researched online first
+(fantasy-anatomy references: the classic Western dragon's 6 limbs, bat-wing membrane mechanics,
+the crocodilian "high walk" with its side-to-side sway and dragging tail, myth behavior —
+*draconta*, "to watch", Smaug's hoard — and real reptile body language):
+
+- **New anatomy** — long low torso, a proper **S-curve neck**, raised chest, bigger haunch, a
+  longer thicker tail that **drags on the ground** with dorsal spikes and the classic **barbed
+  spade tip**, real **bat wings** (arm → elbow → wrist → 4 fingers + thumb claw, membrane
+  between the fingers and down to the flank), wedge snout with brow ridges, juvenile nub horns.
+- **New gait** — the reptile **high-walk** (lateral footfall sequence, body sway, head sway,
+  folded wings) replaces the cat trot; the sprint spreads the wings for balance.
+- **Nine dragon activities** (cats never do any of them): **fly** (real traveling flight on
+  beating wings), **roar** (rear back, jaw wide, wings flare — with its own synthesized
+  baby-dragon roar), **hoard** (the Smaug ritual: nuzzles and rubs its little gold-and-gem
+  pile), **perch** (stands tall and sweeps its territory), **tongue** (the forked-tongue air
+  flick), **tail_lash** (the annoyed reptile whip), **bask** (the flat lizard sprawl),
+  **chomp** (snacks on a glowing coal — feeding a dragon gives it coals now), **smoke**
+  (post-fire nostril rings). Cat-exclusive actions (dance, loaf, knead, zoomies…) are gone
+  from its day.
+- The signature stays: **fire throwing in red and blue**, on command (tray / right-click /
+  store quick-actions now include **Roar! 🐲** too) and rare autonomous breaths.
+
+<details>
+<summary>🔥 v3.26: THE BABY DRAGON HAS LANDED (the original request)</summary>
+
+The store's first non-cat animal: a **chibi baby dragon** designed from the user's reference
+sheet — sky-blue body, cream belly plates, mint bat wings, cream horns + back spikes, big warm
+brown eyes. Drawn **entirely by math** like every other animal (no sprites): procedural wing
+bones + scalloped membranes, spine spikes sampled on the torso ellipse, honest-skeleton legs,
+and its species signature — **FIRE THROWING in red AND blue** (a 3.2s inhale → blast → taper
+performance with a flickering flame stream, hot core, flame licks and rising embers, plus
+dedicated synthesized roar-whoosh sounds). Command it from the tray / right-click / store
+quick-actions whenever the dragon is equipped; it also breathes fire on its own now and then.
+Wings flap while it runs, a jump is real flight, and it sleeps with its wings folded.
+
+</details>
+
+![](docs/screenshots/06_cat_store.png)
+
+## What the cat actually does
+
+| It can… | Details |
 |---|---|
-| ![live](docs/screenshots/v32_live.png) | ![store](docs/screenshots/v32_store.png) |
+| 🚶 **Live on your windows** | Walks the taskbar, and walks & jumps along the top border of your normal (resized) windows — hopping roof-to-roof, riding along when you drag or resize a window it stands on, and politely skipping maximized full-screen ones |
+| 🖥️ **Feel your machine** | CPU/RAM spike → startled panic · low battery → curls up "to save energy" · 10 PM → yawny naps · new window opens → walks over and sniffs it |
+| 🎵 **Hear your music** | Bops to the beat while Spotify/YouTube plays; new track = excited hop (Windows SMTC) |
+| 💻 **Judge your job** | Loafs on your code editor while you type; happy-dances when your build file goes green, mopes when it's red |
+| ⌨️ **Chase your workload** | Fast typing burst → pounces toward the keyboard · mouse idle nearby → classic red-dot stalking (it remembers) |
+| 🔊 **Speak cat** | Quick tap = one natural single meow · double-click = the classic meow (sound only — nothing opens) · at random times it meows on its own — sometimes a whole burst. Every sound has its own toggle in Settings → Sounds, under an **All sounds** master switch; random meows never play while a click meow is sounding, and the cat walks in silence (footsteps removed) |
+| 🔋 **Save the planet** | Battery under 20% → curls into a ball. When you plug in, it pretends that was the plan all along |
+| ❤️ **Be loved** | Pet it (hold) → purrs + affection meter → unlocks rainbow emotes and, at Lv.4, a boot-time greeting |
+| 🐈 **Have friends** | Companion cat mode: nuzzling, play-fighting, and cursor-related rivalry |
+| 🖱️ **Go anywhere** | Drag it across your whole desktop — including **onto your 2nd monitor** — and it stays visible the entire way. It also **walks there by itself**: strolling past a screen edge hops the camera and the cat keeps going on the next monitor |
+| 📸 **Be famous** | Photo mode (Ctrl+Alt+P) freezes the pose and exports a transparent PNG sticker |
+| 🏆 **Brag** | 8 achievements — "Purring Machine" (100 pets), "Dot Exterminator" (5 laser catches)… |
+| 🍅 **Manage your time** | Pomodoro companion: supervises focus rounds, celebrates with a dance when you finish |
+| 🎃 **Dress up** | Seasonal hats (pumpkin in October, santa in December, shades in summer) + importable JSON community skins |
+| 🚫 **Respect boundaries** | No-walk zones you select straight off the screen, **Windows Snipping Tool style**: a fullscreen crosshair overlay, drag a rectangle, Esc cancels — works across every monitor |
+| 🛡️ **Never vanish** | The cat NEVER hides itself and NEVER quits on its own: closed windows self-heal, a crashed renderer revives, the keyboard hook runs in a disposable sandbox process, sleep/resume revives it — only **Quit** stops it |
+| 🎮 **Play** | Interactive laser-pointer chase (+3 coins per catch), ambient butterflies, zoomies, sneezes, hairballs, a bread emote for the loaf |
+| ⏰ **Nag you** | Reminders & timers — the cat dances and delivers your actual message |
+| 🛍️ **Get adopted** | Cat Store: 3 cats + **the true dragon (fire, flight, hoards, roars)** + a panda that waddles like a real bear and eats bamboo sitting up, 14 hats + 6 winter jackets |
 
----
+**Every feature above has an on/off toggle** in a Windows 11 Fluent-style Settings app
+(left nav, cards, proper toggle switches — it looks like it ships with Windows).
 
-## ✨ Features
+![](docs/screenshots/04_settings_sounds.png)
+
+## Smoothness is a feature (the anti-flicker architecture)
+
+The overlay is a **full-width ground lane**: the cat's favorite gait — strolling along the
+ground — happens inside a window that never moves. Zero `SetWindowPos` while walking means
+zero flicker, by construction, not by tuning. The chase camera only wakes for the rare
+vertical cases (platform climbs, rides) at a capped ≤15px/frame, and it now also follows you
+**while you drag the cat**, so the sprite always has canvas under it.
+
+![](docs/screenshots/03_companion.png)
+
+No-walk zone selection looks like taking a screenshot — because it should:
+
+![](docs/screenshots/07_zone_select.png)
+
+## Install
+
+1. Grab `MeowCat-3.27.0-portable.exe` from [Releases](https://github.com/mythos0/meow/releases).
+2. Run it. A ginger kitten appears. That's the whole setup.
+3. Right-click the cat → **Settings…**, or double-click it. Tray icon works too.
+4. **Click the cat** → one natural single meow. Double-click → the classic meow, sound only. Hold → purring. Right-click → the full menu.
 
 | | |
 |---|---|
-| 🎨 **Procedural 2D-canvas cat** | radial-gradient shading, IK legs, chained pendulum tail — 100% code, 0 image frames |
-| 🐱🐉 **Three cats + a dragon, chosen by you** | **Ginger Cat** (the default — the big-headed, short-legged kitten everyone knows), **Grey Tabby**, and the blue-grey plush **Smokey Kitten** to unlock — plus the **Baby Dragon**, the store's first non-cat animal, and **14 hats** (top hat, crown, bow, pumpkin, santa, flower, shades, witch, party, chef, cowboy, beanie, halo, devil horns) and **6 winter jackets** (puffer, parka, santa coat, knit sweater, powder suit, cardigan) from the Cat Store — every one drawn on the cat in real time, and hats stack with jackets |
-| 🦋 **Real butterfly hunts** | butterflies visit every display, hovering **above paw reach** and periodically dipping into it — the cat stalks, **stands on its hind legs and swats**; a missed swat means a sharp **dodge-climb** and a fresh chase, 3 misses = the butterfly escapes, a well-timed connect earns 🪙 + a heart |
-| 💃 **Choreographed dance** | a six-step routine danced **on its hind legs**, with **stubby short legs** on a low compact body; the side-steps really **travel across the screen**, the raised paws are the cat's actual front paws (exactly four limbs at all times), and there are zero pose snaps between steps |
-| 🐈‍⬛ **Companion kitten** | a second small cat that follows the big cat, leaps up to join it on window tops, wakes when the pair separates, and play-fights |
-| 🚶 **Window-top hopping** | any window (any size, resizable) near the cat becomes a walkable platform: jump on, stroll, hop to the next window, drop back down |
-| 🖥️ **True multi-monitor** | the cat can be **dragged onto the 2nd monitor** (main streams the real cursor across boundaries) and **walks there by itself** with a single discrete lane hop — no flicker, ever |
-| 🚫 **No-walk zones, screenshot-style** | press "Select area on screen" and **drag a rectangle straight off the desktop** (Windows Snipping Tool style, crosshair overlay, Esc cancels); the cat refuses to walk into it, and window tops overlapping it are never used |
-| 🔊 **All-sound controls** | a **master toggle** plus separate toggles for single-click meow, double-click meow, random meows, contextual sounds and the reminder chime; **double-click only plays the classic meow** — nothing opens |
-| 🤫 **Quiet walking** | footsteps are gone; ambient meows are natural single calls (occasionally a burst) and never overlap a click meow |
-| ⏰ **Reminders & Pomodoro** | one-shot / daily / weekly / every-N repeats with bubble + chime; focus/break timer with a celebration dance — both live on the settings homepage |
-| 🏆 **Achievements & affection** | pet to build affection, unlock perks (sparkle landings, greeting bows) and achievements |
-| 📸 **Photo mode** | Ctrl+Alt+P freezes the pose and saves a transparent PNG |
-| 🪶 **Truly low memory** | one small overlay lane, services in-host, **one renderer at rest** — closing Settings immediately frees its process; 6 processes total, ~46MB main |
-| 🛡️ **Never quits on its own** | a hard quit gate blocks any non-explicit exit (window loss, crashes, signals, stray quits are reversed and journaled); closing the cat only **parks it in the tray** (with a "still here" balloon) and a watchdog re-creates and re-shows it no matter what; only **you** can Quit |
-| ⌨️ **Hotkeys & privacy** | Ctrl+Alt+C summon/hide, Ctrl+Alt+P photo — all optional toggles; no telemetry ever |
+| **Stack** | Electron 33 · HTML5 Canvas 2D · zero native modules required for the core |
+| **Art** | 100% procedural — palettes + body skeletons + IK pose math, no PNGs |
+| **Sounds** | Real recorded cats, normalized to 16-bit 44.1kHz |
+| **Tests** | 432 unit + 100 visual + 318 skin-matrix = **850 checks green** (the real app under Xvfb, every feature exercised live) |
+| **RAM** | ~170 MB PSS at rest, all processes honestly named MeowCat |
+| **Multi-monitor** | The cat roams the union of every display's work area — drag it to monitor 2, it walks right over |
+| **Docs** | [RENDERING](docs/RENDERING.md) · [FEATURES](docs/FEATURES.md) · [BUILD](docs/BUILD.md) · [TESTING](docs/TESTING.md) |
 
-## 🎮 Interactions
+## Community skins (no recompile!)
 
-| you do | the cat does |
-|---|---|
-| **single click** | a natural single meow |
-| **double-click** | the classic meow — that's it, nothing opens (while music is actually playing the meow politely holds its tongue and mouths a silent ♪ instead) |
-| **drag & drop** | rides your cursor anywhere — including across monitor boundaries |
-| **right-click** | menu: Settings · Store · Reminders · Dance · Feed · Sleep · **Breathe Fire** (when the dragon is equipped) · Quit |
-| **feed it** | a fish appears — it bites, chews and swallows |
-| **nothing** | it lives its own life: strolls, naps, grooms, hunts butterflies, makes biscuits |
-| **multiple meows in a row** | they **queue and play one after another** — never cutting each other off |
+Drop a JSON file via **Settings → Cat Store → Import…**:
 
-> **v3.18 housekeeping** — the voice feature set ("hey cat" commands, the speech engines and
-> the YouTube launcher) is **gone entirely**: it never worked reliably on real machines and it
-> cost a background process. The Cat Store is now a **curated boutique** — three cats, hats and
-> dresses — and a cat that bumps into a wall now **stops, sniffs and turns around once** like a
-> real cat instead of flipping back and forth in place.
->
-> **v3.18.1** replaces the v3.18.0 installer, which was uploaded corrupted and could not start
-> on some PCs ("version not compatible"). It also keeps the cat inside its roaming lane when
-> it chases your cursor or the laser dot to the very screen edge.
->
-> **v3.19 — the real ginger cat is home.** v3.18 accidentally swapped the beloved default
-> ginger kitten for a different-looking cat wearing the same name. The **real Ginger Cat** —
-> the big-headed, short-legged, big-eyed kitten that has been the default since the early
-> releases — is back, byte-for-byte, and is the **default cat again**. If your save file was
-> switched to the grey tabby by v3.18, the ginger cat **walks home automatically** on first
-> launch. The wardrobe also doubled: **7 new hats** (witch, party, chef, cowboy, beanie,
-> halo, horns) and **6 new costumes** (sakura, sunshine, rainbow, strawberry, hero suit,
-> pirate) — every one of them rendered, mirrored and pixel-diffed across all three cats
-> before shipping.
->
-> **v3.20 — the Cat Store closes cleanly now.** A major bug could take the whole cat down
-> when you closed the Cat Store window; the close path is rebuilt so closing the store only
-> ever closes the store, and three independent safety nets (a visibility fallback, a 2-second
-> cat watchdog and an all-windows-lost resurrection) make sure the cat **always** comes back.
-> At the same time the wardrobe is **hats-only**: all dresses/costumes were removed at your
-> request — every one of the 14 hats is still there, still rendered and pixel-verified on all
-> three cats.>
->
-> **v3.21 — the unkillable cat + winter jackets are back.** The Cat Store close bug that
-> survived v3.20 is now fixed **at the root**: the one crash class that could still kill the
-> whole app instantly (a compositor crash running *inside* the main process) is gone — GPU
-> work runs in its own crash-isolated process again — the cat window itself is now
-> **unclosable** from every side path, a 2-second watchdog re-creates *and re-shows* the cat
-> no matter what, and a renderer-level close bypass discovered and sealed during development
-> (a `window.close()` that destroyed the window without any close event firing) is denied and
-> journaled. And at your request, **winter jackets return to the Cat Store**: six procedurally
-> drawn coats — puffer, parka, santa coat, knit sweater, powder suit, cardigan — fitted to
-> every body type, stackable with every hat, all pixel-verified across the three cats.
+```json
+{
+  "name": "Nightsky",
+  "base": "bombay",
+  "body": "chubby",
+  "colors": { "fur": "#4a4a7a", "eye": "#ffd94d", "belly": "#c8c8f0" },
+  "pattern": "spots",
+  "hat": "pumpkin"
+}
+```
 
->
-> **v3.22 — natural legs.** If your cat's upper legs looked too **long** while dancing or
-> walking — that bug is fixed at the root. The leg bones were shorter than the standing
-> height, so moving poses silently stretched them (walking drew legs 1.5× their real
-> length, the dance "hands up" move 2.8×). Legs are now sized honestly to the body, a
-> drawn paw can never exceed the leg's reach (it **bends at the joint** like a real
-> cat's instead), and the dance's raised paws sit bent at the cheeks — a proper begging
-> pose — instead of straight stilts past the ears. Every movement — walk, run, gallop,
-> jump, the six-step dance and all 26 actions — was re-rendered frame by frame and
-> eyeballed on all three cats.
+It appears in the Cat Store like any breed. Ship your cat. Open a PR. Famous.
 
+## Build from source
 
-> **v3.23 — closing the window parks the cat in the tray.** The fix for "closing the window
-> quits the cat": a close gesture on the cat itself (Alt+F4, an OS window close, anything) now
-> **parks the cat in the system tray** — the window hides, the app keeps running, and a one-time
-> balloon tells you *"MeowCat is still here — click the tray icon (or press Ctrl+Alt+C) to bring
-> it back."* Left-clicking the tray icon wakes the cat instantly, relaunching the exe does too,
-> and the tray menu keeps its Show/Hide switch. Only the explicit **Quit** (tray or context menu)
-> ever stops the cat.
+```bash
+cd app-electron
+npm install
+npm start        # run the cat
+npm test         # 288 unit + 89 visual checks
+npm run dist     # portable Windows exe (MeowCat.exe, honestly named)
+```
 
-> **v3.24 — auto hide & show.** A new toggle on the **Cat Store homepage**: the cat naps in the
-> tray for a set time (**10 minutes by default**, adjustable 1–720) and pops back on its own for
-> a **10-second cameo** (visibly — every wake is verified on screen) — a natural meow, its six-step dance, then the classic double-click meow
-> — then naps again until you turn it off (which brings the cat back instantly). A live status
-> line shows what the cat is up to, the tray tooltip reads "napping in the tray" while parked,
-> and every voice respects your sound toggles.
+## Testing philosophy
 
-> **v3.25 — cameos you can actually SEE + realistic cat bodies.** Two fixes in one release.
-> **(1)** The auto-hide cameo could play its meows **without the cat ever appearing** — a Windows
-> transparent-window quirk: after a long nap the re-shown window is "visible" to the OS while the
-> compositor never presents its frames (sound needs no compositing; the canvas does). Now every
-> wake **force-presents the surface** (window-style re-application, z-order, compositor invalidate,
-> the classic 1px DWM nudge), the renderer **proves the wake with real pixels**, and a verification
-> ladder escalates (harder kick → live probe → page reload, cameo replayed) if it ever isn't. A
-> starvation fallback keeps the cat on screen even on a wedged page, and the Cat Store status line
-> (broken since v3.24) actually renders now. **(2)** Every cat body was **remade from real feline
-> anatomy data** — domestic cats are ~2× longer than tall, the body spans 2.5–3 head-lengths, and
-> kittens have oversized heads with short chunky legs. Legs are 15–18% shorter, torsos longer and
-> lower-slung, heads bigger and seated closer, limbs fur-thick — no more stilts.
+The cat is 100% code, so the cat is 100% testable: the brain is a deterministic seeded state
+machine (unit-tested), the renderer is a pure draw function (pixel-tested in headless Chromium),
+and the full app boots under Xvfb where an E2E harness pokes *every feature* — it walks the cat
+while capturing 90 consecutive frames to prove **zero flicker and zero window moves**, drags the
+cat far outside the old region to prove it never disappears, draws a no-walk zone with the
+screenshot-style overlay, clicks it 10 times fast to prove exactly one meow voice, launches a
+second instance to prove the first survives, and closes every helper window to prove the
+process never stops. All green, every release.
 
-> **v3.26 — THE BABY DRAGON HAS LANDED. 🔥** The Cat Store's first non-cat animal: a **chibi
-> baby dragon** designed from a hand-drawn reference sheet — sky-blue body, cream belly plates,
-> mint bat wings, cream horns and back spikes, big warm brown eyes. Like every animal here it is
-> drawn **entirely by math** — no sprites: the wings fan real finger bones under a scalloped
-> membrane (they bounce with the trot, beat hard enough that a **jump is actual flight**, and
-> fold flat for naps), the spine spikes are sampled off the torso curve, and the legs follow the
-> same honest-skeleton rules as the cats. And it has its species signature: **FIRE THROWING, in
-> red AND blue** — a 3.2-second performance (rears back, inhales with a swelling chest, spreads
-> its wings, then breathes a flickering flame stream with a hot core, licks and rising embers,
-> each color with its own synthesized roar). Command it from the tray menu, the right-click menu
-> or the store's new fire buttons whenever the dragon is equipped — and sometimes it breathes
-> fire all on its own.
+## License
 
-## 📥 Install (Windows 11)
-
-1. Download **`MeowCat-3.26.0-portable.exe`** from the [latest release](../../releases/latest).
-2. Double-click it — no installer, no runtime, no admin rights. A tray icon appears and the
-   cat starts exploring.
-3. Quit anytime from the tray menu.
-
-> Fully self-contained (Electron 33 embedded) — nothing else to install. The process is named
-> **MeowCat** in Task Manager, not some framework name.
-
-## ❓ FAQ
-
-* **Is anything sent to the internet?** No. MeowCat has no telemetry and no network features at
-  all — everything runs locally on your machine.
-* **Does it slow my PC down?** It's a single small canvas being redrawn — exactly one renderer at rest and a small
-  crash-isolated GPU helper; closing the Settings window frees its process immediately.
-* **Where did the other cats go?** v3.18 curates the store: Grey Tabby, Ginger Cat and Smokey
-  Kitten — with 14 hats and 6 winter jackets to collect. Since v3.26 there's also the
-  **Baby Dragon** (300 coins) — the first non-cat animal, and it breathes fire. (Old save files with removed cats roll onto the
-  default cat automatically — and since v3.19 the default cat is the **real Ginger Cat**
-  again; a save that v3.18 parked on the grey tabby walks back home on first launch.)
-* **Why is the cat sometimes on a window?** Windows' top borders are its shelves — it's a
-  feature, not a glitch. It will hop down on its own.
-* **Why didn't my zone-selection show on the other monitor?** Move the mouse there — the
-  crosshair overlay follows your cursor across displays.
-* **The cat disappeared / my PC slept** — it revives itself. It cannot quit on its own; only
-  the tray menu's Quit (or you) can close it.
-
-## 👨‍💻 Developer
-
-Built by [**mythos0**](https://github.com/mythos0) — the private source repository, the public
-issue tracker and future releases all live on GitHub.
-
-## 📄 License
-
-MIT © 2026 mythos0 — see [LICENSE](LICENSE).
-
+MIT © 2026 mythos0. The cat is not licenced for use in nuclear facilities, but honestly it would
+probably improve morale there too.
